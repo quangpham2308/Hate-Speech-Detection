@@ -45,7 +45,6 @@ if st.button("check for hate and offensive language"):
             st.subheader("Additional Information")
             st.write("Prediction Probability: ", model.predict_proba(data)[0, 1])
             st.write("Decision Path: ", model.decision_path(data))
-            st.write("Feature Importance: ", model.feature_importances_)
         elif pred == "No Hate and Offensive language":
             st.success("No Hate and Offensive Language was detected")
             st.image("non_hate_image.png", caption="Kind words are a creative force, a power that concurs in the building up of all that is good, and energy that showers blessings upon the world.", width=300)
@@ -54,7 +53,6 @@ if st.button("check for hate and offensive language"):
             st.subheader("Additional Information")
             st.write("Prediction Probability: ", model.predict_proba(data)[0, 1])
             st.write("Decision Path: ", model.decision_path(data))
-            st.write("Feature Importance: ", model.feature_importances_)
         elif pred == "Hate Speech":
             st.error("Hate Speech Detected")
             st.image("hate_speech_image.png", caption="Be careful with your words. Once they are said, they can be only forgiven, not forgotten.", width=300)
@@ -63,7 +61,6 @@ if st.button("check for hate and offensive language"):
             st.subheader("Additional Information")
             st.write("Prediction Probability: ", model.predict_proba(data)[0, 1])
             st.write("Decision Path: ", model.decision_path(data))
-            st.write("Feature Importance: ", model.feature_importances_)
         else:
             st.warning("Not Found")
 
